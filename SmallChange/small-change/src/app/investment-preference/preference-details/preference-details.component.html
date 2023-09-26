@@ -1,0 +1,26 @@
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+    <div class="card text-white bg-dark mb-3">
+      <div class="card-header">
+        <h3>Your Investment Preference</h3>
+      </div>
+      <div class="card-body" *ngIf="currentUserInvestment">
+        <p>Investment Purpose : {{currentUserInvestment.investmentPurpose}}</p>
+        <p> length of Invetsment : {{ lengthOfInvestmentMapping[ currentUserInvestment.lengthOfInvestment]}}</p>
+        <p> Income Category : {{ incomeCategoryMapping[ currentUserInvestment.incomeCategory]}}</p>
+        <p> Rish Tolerance: {{currentUserInvestment.riskTolerance}} </p>
+      </div>
+      <div class="card-footer">
+        <div class="col-12" style="text-align: center;">
+          <a style="margin-bottom:10px;" class="btn btn-primary" [routerLink]="['/preference','edit']">Update Investment Preference</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row" style="color: red;" *ngIf="!currentUserInvestment">
+      Please set yout Investment reference
+  </div>
+</section>
+

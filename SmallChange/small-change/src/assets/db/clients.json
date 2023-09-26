@@ -1,0 +1,13 @@
+[
+  {
+    "email":"user1@gmail.com",
+    "dateOfBirth":"199-09-09",
+    "country":"IND",
+    "postalCode":"560061",
+    "password":"Nikhil@123",
+    "userName":"Nikhil V",
+    "identification":[
+      {"type":"SSN","value":"98765609"}
+    ]
+  }
+]

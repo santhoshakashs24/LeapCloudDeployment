@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+
+.invalid-form-control {
+  color: #212529;
+  background-color: #fff;
+  border-color: red;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);
+}
+
+select.ng-valid{
+  border-left: 5px solid green;
+}
+
+input.ng-valid:not([type~='radio']){
+  border-left: 5px solid green;
+}
+
+select.ng-invalid.ng-touched:not([type~='radio']){
+  border-left: 5px solid red;
+}
+
+input.ng-invalid.ng-touched:not([type~='radio']){
+  border-left: 5px solid red;
+}
+
+/* css for custom slider */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.spinner-border{
+  margin-left: 6rem;
+}
+
+body{
+  background-color: black;
+}
+
+/* card styles*/
+
+.card-header{
+  border-bottom: 2px solid white;
+}
+
+.card-footer{
+  border-top: 2px solid white;
+}
+
+
+@media(max-width:400px){
+  .spinner-border{
+    margin-left: 0;
+  }
+
+}

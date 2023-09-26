@@ -1,0 +1,13 @@
+com\fidelity\dao\impl\myBatis\PortfolioDaoMyBatisImpTest.class
+com\fidelity\service\impl\PortfolioServiceImplTest.class
+com\fidelity\service\impl\TradeServiceTest.class
+com\fidelity\integration\DbTestUtils.class
+com\fidelity\dao\impl\myBatis\ClientDaoMyBatisImplTest.class
+com\fidelity\restservices\TestPortfolioControllerE2E.class
+com\fidelity\dao\impl\myBatis\InvestmentPrefDaoMyBatisImplTest.class
+com\fidelity\service\impl\PortfolioServiceMyBatisDaoIntegrationTest.class
+com\fidelity\restservices\TestActivityControllerE2E.class
+com\fidelity\service\impl\InvestmentPrefServiceTest.class
+com\fidelity\smallchangespring\SmallchangeSpringApplicationTests.class
+com\fidelity\dao\impl\myBatis\ActivityDaoMyBatisImplTest.class
+com\fidelity\service\impl\ActivityServiceMyBatisDaoIntegrationTest.class

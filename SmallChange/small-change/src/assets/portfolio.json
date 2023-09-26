@@ -1,0 +1,41 @@
+[
+    {
+    "portfolio_id": "1111",
+    "user_id" : 1,
+    "portfolio_category":"BROKERAGE",
+    "portfolio_name":"My new portfolio",
+    "stocks":[
+        { "id":1, "instrumentId": "28738384", "instrument_codename":"APL", "quantity":450, "value":89000, "price":776,"change":-14.07},
+        { "id":2, "instrumentId": "87738384", "instrument_codename":"AMZ","quantity":450, "value":89000, "price":776,"change":5.07},
+        { "id":3, "instrumentId": "28738384", "instrument_codename":"GGL", "quantity":227, "value":89000, "price":776,"change":14.07},
+        { "id":4, "instrumentId": "28738384", "instrument_codename":"BBY", "quantity":700, "value":89000, "price":776,"change":14.07}
+    ],
+    "portfolio_balance":100000
+
+  },
+  {
+
+        "portfolio_id": "2222",
+        "user_id" : 1,
+        "portfolio_category":"BROKERAGE",
+        "portfolio_name":"Demo portfolio",
+        "stocks":[
+            { "id":1, "instrumentId": "28738384", "instrument_codename":"APL", "quantity":450, "value":89000, "price":776,"change":-4.07},
+            { "id":2, "instrumentId": "87738384", "instrument_codename":"APL","quantity":450, "value":89000, "price":776, "change":10.99}
+        ],
+        "portfolio_balance":100000
+  },
+  {
+
+    "portfolio_id": "3333",
+    "user_id" : 3,
+    "portfolio_category":"NEW INVEST",
+    "portfolio_name":"New portfolio",
+    "stocks":[
+        { "id":1, "instrumentId": "28738384", "instrument_codename":"APL", "quantity":450, "value":89000, "price":776,"change":-4.07},
+        { "id":2, "instrumentId": "87738384", "instrument_codename":"APL","quantity":450, "value":89000, "price":776, "change":10.99}
+    ],
+    "portfolio_balance":100000
+}
+
+]

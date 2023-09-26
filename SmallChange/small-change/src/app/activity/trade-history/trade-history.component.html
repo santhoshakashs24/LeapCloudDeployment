@@ -1,0 +1,42 @@
+<div class="container-fluid text-center background">
+    <h2>Trade History</h2>
+    <br />
+    <div class="row">
+        <div class="col-12 table-responsive-lg">
+            <table style="width: 100%;">
+                <tr class="card text-bg-dark">
+                    <td>
+                        <div class="card-body">
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Instrument Id</th>
+                                        <th>Quantity</th>
+                                        <th>Execution Price</th>
+                                        <th>Direction</th>
+                                        <th>Client Id</th>
+                                        <th>Trade Id</th>
+                                        <th>Cash Value</th>
+                                        <th style="min-width: 150px ;">Trade Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let trade of tradeList">
+                                        <td>{{trade.instrumentId}}</td>
+                                        <td>{{trade.quantity}}</td>
+                                        <td>{{trade.executionPrice | currency}}</td>
+                                        <td>{{trade.direction | expand}}</td>
+                                        <td>{{trade.clientId}}</td>
+                                        <td>{{trade.tradeId}}</td>
+                                        <td>{{trade.cashValue | currency}}</td>
+                                        <th>{{trade.transactionAt | date:'medium'}}</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

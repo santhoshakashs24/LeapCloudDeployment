@@ -1,0 +1,24 @@
+section{
+  margin-top: 10px;
+  border: 2px solid #568200;
+  background-color: #70a702;
+  border-radius: 20px;
+}
+
+.card-title{
+  border-bottom: 2px solid white;
+}
+
+h3{
+  color: white;
+}
+#details{
+  border-top: 2px solid black;
+}
+p:first-child{
+  padding-top: 15px;
+}
+p{
+  padding-bottom: 4px;
+  border-bottom: 1px solid white;
+}

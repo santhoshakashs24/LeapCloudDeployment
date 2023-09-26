@@ -1,0 +1,12 @@
+footer{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    max-width: 62.5em;
+    display: block;
+    color: white;
+  }
+
+  hr{
+    color: white;
+  }

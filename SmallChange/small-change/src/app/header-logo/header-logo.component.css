@@ -1,0 +1,12 @@
+div{
+    background-color:  #568200;
+    color: #fff;
+    box-sizing: content-box;
+  }
+  h1{
+    font-size: 32px;
+    line-height: 1.5em;
+    font-family: 'Fidelity Sans' ,  Arial,  sans-serif;
+    margin: 0 auto;
+    padding-left: 10px;
+  }

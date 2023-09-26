@@ -1,0 +1,49 @@
+<div class="card text-white bg-dark">
+  <div class="card-header">
+    <div class="card-title"> <h3> Edit Investment preference </h3></div>
+  </div>
+  <div class="card-body container-fluid">
+    <form (ngSubmit)="updateMyPreference()" [formGroup]="preferenceForm" class="row g-3">
+      <div class="col-md-6">
+        <label for="investmentPurpose" class="form-label">Investment Purpose</label>
+        <input type="email" class="form-control" id="investmentPurpose" formControlName="investmentPurpose">
+      </div>
+      <div class="col-md-6">
+        <label for="riskTolerance" class="form-label">Risk Tolerance</label>
+        <select type="email" class="form-control" id="riskTolerance" formControlName="riskTolerance">
+          <option value="CONSERVATIVE" selected>CONSERVATIVE </option>
+          <option value="BELOW_AVERAGE">BELOW AVERAGE </option>
+          <option value="AVERAGE">AVERAGE </option>
+          <option value="ABOVE_AVERAGE">ABOVE AVERAGE  </option>
+          <option value="AGGRESSIVE">AGGRESSIVE </option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="incomeCategory" class="form-label">Income Category</label>
+        <select type="email" class="form-control" id="incomeCategory" formControlName="incomeCategory">
+        <option value="BASIC" selected>  0 - 20,000 </option>
+        <option value="LOW">  20,001 - 40,000 </option>
+        <option value="MEDIUM">  40,001 - 60,000 </option>
+        <option value="HIGH">  60,001 - 80,000 </option>
+        <option value="EXTREME">  80,001+ </option>
+        <!-- <option value="100,001 - 150,000">  100,001 - 150,000 </option>
+        <option value="150,000+">  150,000+ </option> -->
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="lengthOfInvestment" class="form-label">Length of Investment</label>
+        <select type="email" class="form-control" id="lengthOfInvestment" formControlName="lengthOfInvestment">
+          <option value="BASIC" selected> 0-5 years </option>
+          <option value="LOW"> 5-7 years </option>
+          <option value="MEDIUM"> 7-10 years </option>
+          <option value="HIGH"> 10-15 years </option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer" style="text-align: center;">
+    <button (click)="updateMyPreference()" style="margin-right:10px;" [disabled]="!preferenceForm.valid" class="btn btn-success">Save My Preference</button>
+    <button style="margin-right:10px;" class="btn btn-danger">Reset</button>
+    <a [routerLink]="['/portfolio']" style="margin-right:10px;" class="btn btn-warning">Go To Home</a>
+  </div>
+</div>

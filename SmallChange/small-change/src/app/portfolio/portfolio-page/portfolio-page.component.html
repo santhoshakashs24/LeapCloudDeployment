@@ -1,0 +1,77 @@
+
+<div class="container-fluid text-center background" >
+    <h2>My Portfolio</h2>
+    <br/>
+
+    <div *ngIf="length>0" class="row">
+        <div class="col-12 offset-lg-1  col-lg-10">
+            <div style="width: 100%;" >
+<!-- class="card text-bg-dark"-->
+                <div *ngFor="let item of port" class="card text-bg-dark">
+
+                    <div class="card-header">
+                        <h5>{{item.portfolio_name}}</h5>
+                    </div>
+                    <div class="card-title"><span class="badge text-bg-success">{{item.portfolio_category}}</span></div>
+
+                    <!-- <td> -->
+                        <div class="card-body">
+                          <div class="value-box" style="background-color: green;" >
+                            <label class="form-label">Current Balance</label>
+                            {{item.portfolio_balance | number:".3"}}
+                          </div>
+                          <div class="value-box" style="background-color:blue;"  >
+
+                            <label class="form-label">Total Investment Value</label>
+                            {{item.totalInvestmentPrice |  number:".3"}}
+                          </div>
+                          <div class="value-box" [ngStyle]=" { 'background-color': (item.totalSharesWorth>item.totalInvestmentPrice)?'Green':'Red' } "   >
+                            <label class="form-label">Returns On Investment</label>
+                            {{item.totalSharesWorth |  number:".3"}}</div>
+                        </div>
+                        <div class="card-body  table-responsive">
+                        <table style="width: 100%;" class="table table-dark table-striped" id="stocktable">
+                            <thead>
+                                <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Instrument_Name</th>
+                                  <th scope="col">Quantity Traded</th>
+                                  <th scope="col"> Price</th>
+                                  <th scope="col">% Change</th>
+                                  <th scope="col"> Worth</th>
+                                  <th scope="col">Actions</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                            <tr *ngFor="let elem of item.stocks">
+                                <td>{{elem.instrumentId}}</td>
+                                <td>{{elem.id}}</td>
+                                <td>{{elem.quantity}}</td>
+                                <td >{{elem.price|currency}}</td>
+                                <td [ngClass]="{positive:elem.change>0,negative:elem.change<=0}">{{elem.change | number:".3"}}%<i class="bi bi-arrow-up-circle"></i></td>
+                                <td>{{elem.value|currency}}</td>
+                                <td>
+                                  <a class="btn btn-success" [routerLink]="['/trade',item.portfolio_id,'B',elem.instrumentId]">BUY TRADE</a>
+                                  <a class="btn btn-warning" [routerLink]="['/trade',item.portfolio_id,'S',elem.instrumentId]">SELL TRADE</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <!-- </td> -->
+                  </div>
+                </div>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div *ngIf="length==0">
+      <button (click)="createClientDefaultPortfolio()" id="create-button" class="btn btn-success">Create My FirstPortfolio</button>
+    </div>
+</div>
+<!-- <a [routerLink]="['/trade','1111','B','T678900']">BUY TRADE</a>
+<a [routerLink]="['/trade','1111','S','T67890']">SELL TRADE</a> -->

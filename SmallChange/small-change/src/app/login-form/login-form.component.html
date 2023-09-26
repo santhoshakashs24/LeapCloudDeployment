@@ -1,0 +1,29 @@
+<div class="box col-12 offset-sm-1 col-sm-10 offset-md-3 col-md-6 offset-lg-4 col-lg-4  ">
+    <form [formGroup]="loginForm" >
+      <div class="mb-3" id="login-error" *ngIf="errorMessage">
+        {{errorMessage}}
+      </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" formControlName="username" name="username">
+            <div class="error" id="login-user-name-error" *ngIf="hasUserNameError()">
+              {{hasUserNameError()}}
+            </div>
+          </div>
+        <div class="mb-3">
+            <label for="password" class="form-label"  >Password</label>
+            <input type="password" class="form-control" name="password" formControlName="password" id="password" required>
+            <div class="error" id="login-password-error" *ngIf="hasPasswordError()">
+              {{hasPasswordError()}}
+            </div>
+          </div>
+        <button type="button" [disabled]="!loginForm.valid" (click)="login()" >Log in</button>
+        <div class="fpwd">
+            <a href="#">Forgot your password?</a>
+        </div>
+        <div class="rnu">
+          New to the application
+          <a [routerLink]="['/register']">click here to create new account</a>
+      </div>
+    </form>
+</div>
