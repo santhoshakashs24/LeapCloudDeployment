@@ -114,4 +114,21 @@ Create a ELB ->
 	Listener Port - 80 (leave it as it is)
 	Create Load Balancer
 
+Small Change Git Repo 2022 (Branch - nikhil):
+Front-End: https://github.com/harshita360/SmallChange/tree/nikhil
+MyBatis: https://github.com/harshita360/SmallChange-Spring-MyBatis/tree/nikil 
+Java: https://github.com/harshita360/SmallChange-JAVA/tree/nikhil 
+
+FMTS: https://drive.google.com/file/d/1tQMfEoriD8VwhuJGu1gRtJ4PI-kMsPbK/view 
+https://github.com/santhoshakashs24/fmts
+
+Clone -
+git clone -b nikhil https://github.com/harshita360/SmallChange.git
+git clone -b nikil https://github.com/harshita360/SmallChange-Spring-MyBatis.git
+git clone -b nikhil https://github.com/harshita360/SmallChange-JAVA.git
+git clone https://github.com/santhoshakashs24/fmts.git
+
+
+https://github.com/santhoshakashs24/LeapCloudDeployment/tree/main 
+
 
