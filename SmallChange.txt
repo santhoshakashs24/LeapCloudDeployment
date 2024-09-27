@@ -10,7 +10,8 @@ Notes
 For AWS RDS SQL - Follow the same doc, except for ec2 connection & SG. Make it Publically accessible and also Inbound Oracle RDS 1521 - 0.0.0.0/0
 Modify publically accessible
 Allow from anywhere for port 1521,- In Oracle RDS SG(Inbound Rules)
-service with correct FTMS URL in CLientServiceImpl, TradeServiceImpl , build jar and sftp to ec2
+
+Test connection from Oracle Sql Developer or in linux server as below:
 
 SQLPLUS Installation
 ----------------
