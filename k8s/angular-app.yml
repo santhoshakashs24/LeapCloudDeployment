@@ -27,12 +27,9 @@ metadata:
   name: angular-app
   namespace: small-change-fse1
 spec:
-  type: NodePort
   selector:
     app: angular-app
   ports:
     - protocol: TCP
       port: 4200
       targetPort: 4200
-      nodePort: 30080  # Optional: specify a port in the range 30000-32767
-

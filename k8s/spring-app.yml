@@ -40,5 +40,3 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-      nodePort: 30095  # Optional: specify a port in the range 30000-32767
-

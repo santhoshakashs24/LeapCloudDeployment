@@ -33,6 +33,5 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      nodePort: 30090  # Optional: specify a port in the range 30000-32767
 
       
