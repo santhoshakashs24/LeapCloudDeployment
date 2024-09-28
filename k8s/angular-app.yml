@@ -18,6 +18,8 @@ spec:
         image: akashl21/small-change-angular-fse1:latest
         ports:
         - containerPort: 4200
+      imagePullSecrets:
+      - name: my-registry-secret      
 ---
 apiVersion: v1
 kind: Service
