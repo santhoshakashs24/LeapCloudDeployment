@@ -11,8 +11,8 @@ import { TradeHisService } from '../services/trade-his.service';
 })
 export class TradeService {
 
-  private tradeUrl:string="https://teamtm.roifmr.com/fmts/trades/trade";
-  private tradeUrlnew:string="https://teamtm.roifmr.com/trade";
+  private tradeUrl:string="http://localhost:3000/fmts/trades/trade";
+  private tradeUrlnew:string="http://localhost:8080/trade";
 
   constructor(private userService:UserServiceService,private http:HttpClient, private activityService:TradeHisService) {
    }

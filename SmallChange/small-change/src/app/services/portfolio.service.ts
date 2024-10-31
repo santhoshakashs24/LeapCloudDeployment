@@ -20,8 +20,7 @@ export class PortfolioService {
   combinedDetails: any[] = [];
   //portfolioUrl = 'assets/portfolio.json';
   //1728765503
-  private backendUrl="https://teamtm.roifmr.com/"
-  portfolioUrl=this.backendUrl + "portfolios"
+  portfolioUrl="http://localhost:8080/portfolios"
   instrumentInfoUrl = 'assets/instruments.json';
   errorMessage: string = '';
   allPortfolio: Portfolio[] = [
@@ -101,11 +100,11 @@ export class PortfolioService {
 
   //    let instrument_prices:InstrumentPrice[];
   //   // let request={instrumentIds:instrument_arr}
-  //   // return this.http.post<InstrumentPrice[]>("https://teamtm.roifmr.com/fmts/trades/prices/list",request,{headers:httpHeaders});
+  //   // return this.http.post<InstrumentPrice[]>("http://localhost:3000/fmts/trades/prices/list",request,{headers:httpHeaders});
 
   //   console.log("before request");
   //   let request={instrumentIds:instrument_arr}
-  //   return this.http.post<InstrumentPrice[]>("https://teamtm.roifmr.com/fmts/trades/prices/list",request,{headers:httpHeaders})
+  //   return this.http.post<InstrumentPrice[]>("http://localhost:3000/fmts/trades/prices/list",request,{headers:httpHeaders})
   //   .pipe(catchError(this.handleError),
   //   switchMap((value:InstrumentPrice[],index:number)=>{
   //     console.log(value);
@@ -150,7 +149,7 @@ export class PortfolioService {
           })
           let instrument_prices:InstrumentPrice[];
           let request={instrumentIds:instrument_arr}
-          return this.http.post<InstrumentPrice[]>("https://teamtm.roifmr.com/fmts/trades/prices/list",request)
+          return this.http.post<InstrumentPrice[]>("http://localhost:3000/fmts/trades/prices/list",request)
           .pipe(catchError(this.handleError),
           switchMap((value:InstrumentPrice[],index:number)=>{
             console.log(value);
@@ -213,7 +212,7 @@ export class PortfolioService {
     const httpHeaders=new HttpHeaders({
       'Content-type':'application/json'
     })
-    this.http.post<InstrumentPrice[]>("https://teamtm.roifmr.com/fmts/trades/prices/list",request,{headers:httpHeaders})
+    this.http.post<InstrumentPrice[]>("http://localhost:3000/fmts/trades/prices/list",request,{headers:httpHeaders})
     .subscribe((data)=>response_arr=data);
 
     let length: number = 0;

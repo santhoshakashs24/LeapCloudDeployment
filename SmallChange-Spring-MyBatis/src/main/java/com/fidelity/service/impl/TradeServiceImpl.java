@@ -123,7 +123,7 @@ public class TradeServiceImpl extends TradeService{
 		headers.add("Content-Type","application/json");
 		headers.add("Accept", "application/json");
 		HttpEntity<OrderDto> requestEntity=new HttpEntity<>(orderdto,headers);
-		ResponseEntity<String> response=restTemplate.postForEntity("https://teamtm.roifmr.com/fmts/trades/trade",requestEntity,String.class);
+		ResponseEntity<String> response=restTemplate.postForEntity("http://fmts-nodejs:3000/fmts/trades/trade",requestEntity,String.class);
 		
         if(response.getStatusCode().is2xxSuccessful() && response.getBody()!=null) {
 			
@@ -171,7 +171,7 @@ public class TradeServiceImpl extends TradeService{
 		headers.add("Content-Type","application/json");
 		headers.add("Accept", "application/json");
 		HttpEntity<OrderDto> requestEntity=new HttpEntity<>(orderdto,headers);
-		ResponseEntity<String> response=restTemplate.postForEntity("https://teamtm.roifmr.com/fmts/trades/trade",requestEntity,String.class);
+		ResponseEntity<String> response=restTemplate.postForEntity("http://fmts-nodejs:3000/fmts/trades/trade",requestEntity,String.class);
 		
         if(response.getStatusCode().is2xxSuccessful() && response.getBody()!=null) {
         	try

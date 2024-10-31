@@ -11,7 +11,7 @@ export class PreferenceService {
 
   constructor(private clientService:UserServiceService,private httpClient:HttpClient){}
 
-  private preferenceUrl="https://teamtm.roifmr.com/preference"
+  private preferenceUrl="http://localhost:8080/preference"
 
   private investmentPreference: {[key:string]:InvestmentPreference}={
     '123-123-123':{

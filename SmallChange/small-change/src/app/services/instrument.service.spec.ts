@@ -40,7 +40,7 @@ describe('InstrumentService', () => {
       next:()=> fail('should not be executed'),
       error:(e)=> errorMessage=e
     });
-    const req=httpController.expectOne('https://teamtm.roifmr.com/fmts/trades/prices/4')
+    const req=httpController.expectOne('http://localhost:3000/fmts/trades/prices/4')
       req.flush('Server Error',{
         status:500,
         statusText:'Internal Server error'
@@ -92,7 +92,7 @@ describe('InstrumentService', () => {
       let returnedInstruments: InstrumentPrice[]=[]
       service.getInstrumentsByCategory('4').subscribe(data=> returnedInstruments=data);
 
-      const req=httpController.expectOne('https://teamtm.roifmr.com/fmts/trades/prices/4')
+      const req=httpController.expectOne('http://localhost:3000/fmts/trades/prices/4')
       req.flush(instrumentPrices)
       httpController.verify()
       tick(4000)

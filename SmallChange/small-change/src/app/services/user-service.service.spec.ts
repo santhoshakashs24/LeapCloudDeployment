@@ -5,8 +5,6 @@ import * as uuid from "uuid";
 import { of } from 'rxjs';
 import { User } from '../models/user';
 
-const backendUrl="https://teamtm.roifmr.com/"
-
 describe('UserServiceService', () => {
   let service: UserServiceService;
   let httpController: HttpTestingController
@@ -42,8 +40,8 @@ describe('UserServiceService', () => {
 
     let resp=false;
     service.authenticateUser('testSER@email.com','Nikhil1@123').subscribe(data => resp=data)
-    
-    const req=httpController.expectOne(backendUrl+'clients/login')
+
+    const req=httpController.expectOne('http://localhost:8080/clients/login')
     expect(req.request.method).toBe('POST')
     req.flush({
       ...testData[0],
@@ -63,7 +61,7 @@ describe('UserServiceService', () => {
       {next:data=> fail("should not excute"),
       error:(err)=>errorMessage=err})
 
-    const req=httpController.expectOne(backendUrl+'clients/login')
+    const req=httpController.expectOne('http://localhost:8080/clients/login')
     expect(req.request.method).toBe('POST')
 
     req.flush(400,{

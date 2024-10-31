@@ -7,8 +7,6 @@ import { Trade } from '../models/trade';
 import { TradeHisService } from './trade-his.service';
 import { UserServiceService } from './user-service.service';
 
-const backendUrl="https://teamtm.roifmr.com/"
-
 describe('TradeHisService', () => {
   let service: TradeHisService;
 
@@ -61,7 +59,7 @@ describe('TradeHisService', () => {
     let trades: Trade[] = [];
     service.getTradeHis()
     .subscribe(data => trades = data);
-      const req=httpTestingController.expectOne(backendUrl+"activity/client")
+      const req=httpTestingController.expectOne("http://localhost:8080/activity/client")
       req.flush(mocktrades)
 
       httpTestingController.verify()

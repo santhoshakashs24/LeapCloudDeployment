@@ -9,10 +9,9 @@ import { ClientIdentification } from '../models/client-identification';
 })
 export class UserServiceService {
 
-  private backendUrl="https://teamtm.roifmr.com/"
-  //private clientUrl="https://teamtm.roifmr.com/fmts/client"
-  private clientUrl= this.backendUrl + "clients/login"
-  private registerUrl= this.backendUrl + "clients/register"
+  //private clientUrl="http://localhost:3000/fmts/client"
+  private clientUrl="http://localhost:8080/clients/login"
+  private registerUrl="http://localhost:8080/clients/register"
   users:User[]=[
     new User(
       NaN,

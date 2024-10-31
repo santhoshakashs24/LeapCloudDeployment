@@ -72,8 +72,8 @@ export class TradeHisService {
   //     transactionAt:new Date(Date.now())
   //   }
   // ];
-  private backendUrl="https://teamtm.roifmr.com/"
-  activityUrl= this.backendUrl + "activity/client"
+
+  activityUrl="http://localhost:8080/activity/client"
 
   constructor(private clientService:UserServiceService,private httpClient:HttpClient) { }
 

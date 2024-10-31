@@ -10,7 +10,7 @@ import { InstrumentPrice } from '../models/instrument-price';
 })
 export class InstrumentService {
 
-  private instrumentUrl:string='https://teamtm.roifmr.com/fmts/trades/prices'
+  private instrumentUrl:string='http://localhost:3000/fmts/trades/prices'
 
   instruments:Instrument[]=[
     {

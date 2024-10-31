@@ -115,7 +115,7 @@ public class ClientServiceImpl extends ClientService{
 		try{
 			logger.debug("Going to issue request");
 		
-			response= restTemplate.postForEntity("https://teamtm.roifmr.com/fmts/client/", requestEntity ,String.class);
+			response= restTemplate.postForEntity("http://fmts-nodejs:3000/fmts/client/", requestEntity ,String.class);
 			
 			logger.debug(response.toString());
 

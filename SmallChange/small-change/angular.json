@@ -137,8 +137,5 @@
       }
     }
   },
-  "defaultProject": "small-change",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "small-change"
 }

@@ -2,8 +2,6 @@ import { fakeAsync, inject, TestBed, tick } from '@angular/core/testing';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import { PortfolioService } from './portfolio.service';
 
-const backendUrl="https://teamtm.roifmr.com/"
-
 describe('PortfolioService', () => {
   let service: PortfolioService;
   let httpTestingController: HttpTestingController;
@@ -50,7 +48,7 @@ describe('PortfolioService', () => {
     let portfolios: any[] = [];
     service.getPortfolioData()
     .subscribe(data => {console.log(data);portfolios = data});
-    const req = httpTestingController.expectOne(backendUrl+'portfolios/client');
+    const req = httpTestingController.expectOne('http://localhost:8080/portfolios/client');
     expect(req.request.method).toEqual('GET');
 
     req.flush(mockportfolioV2);
@@ -70,7 +68,7 @@ describe('PortfolioService', () => {
       { next:data=> fail("false"),
       error:(e)=> errorMsg=e}
     )
-    const req=httpTestingController.expectOne(backendUrl+'portfolios/client')
+    const req=httpTestingController.expectOne('http://localhost:8080/portfolios/client')
     expect(req.request.method).toBe('GET')
     req.flush('Attribute error',{
       status:404,
