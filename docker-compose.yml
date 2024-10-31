@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  angular-app:
+    image: akashl21/small-change-angular-fse1:latest
+    ports:
+      - "4200:4200"
+    depends_on:
+      - fmts-nodejs
+      - spring-app
+    network_mode: "host"
+
+
+  fmts-nodejs:
+    image: akashl21/small-change-fmts-fse1:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - spring-app
+    network_mode: "host"
+
+  spring-app:
+    image: akashl21/small-change-spring-mybatis-fse1:1.2
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@orcl.cp8g424og328.ap-south-1.rds.amazonaws.com:1521/orcl
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: tiger123
+    network_mode: "host"
+# networks:
+#   default:
+#     external:
+#       name: smallChange
